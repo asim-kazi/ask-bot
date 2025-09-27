@@ -1,0 +1,19 @@
+{
+  "name": "Asim Faruk Kazi",
+  "role": "CSE (AI-ML) Final Year Student",
+  "skills": ["Python", "Java", "SQL", "Machine Learning", "React", "FastAPI"],
+  "education": [
+    {
+      "degree": "B.Tech in CSE (AI-ML)",
+      "institute": "DKTE Society's Textile & Engineering Institute (An Empowered Autonomous Institute)",
+      "year": "2022-2026"
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI Chatbot Project",
+      "description": "Personal assistant chatbot with RAG + GPT fallback",
+      "tech": ["Python", "LangChain", "React", "FastAPI"]
+    }
+  ]
+}
