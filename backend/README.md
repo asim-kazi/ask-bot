@@ -1,49 +1,60 @@
 # Ask-Bot 🤖
 
-**Ask-Bot** is an AI-powered personal assistant that can:
+**Ask-Bot** is an AI-powered personal assistant designed to answer questions using a specialized knowledge base. It uses a **FastAPI** backend, **LangChain** for orchestration, and a modern **React/Tailwind** frontend.
 
-- Answer questions about me (skills, projects, education) using my custom data.
-- Answer general questions using GPT fallback.
+## ✨ Key Capabilities
 
-## 📂 Project Structure
+* **Personalized Answers:** Answers questions about me (skills, projects, education) by leveraging custom data.
+* **General Q&A:** Fallback to a powerful Large Language Model (LLM) for general queries.
 
-ask-bot/
-├── backend/ # FastAPI + LangChain + Chroma
-│ ├── README.md
-│ ├── requirements.txt
-│ └── .env.example
-├── frontend/ # React + Tailwind chat UI
-│ └── package.json
-├── data/ # Personal data for embeddings
-│ └── personal.json
-└── docs/ # Architecture diagrams, notes
-
-## 🚀 Setup
-
-1. Clone repo:
-
-```bash
-git clone https://github.com/<your-username>/ask-bot.git
-cd ask-bot
-```
-
-2. Install backend deps:
-   cd backend
-   pip install -r requirements.txt
-
-3. Setup env:
-   cp .env.example .env
-
-4. (Frontend setup will be added later)
+---
 
 ## 🛠 Tech Stack
 
-Backend: FastAPI, LangChain, ChromaDB
+| Component | Technologies |
+| :--- | :--- |
+| **Backend** | **FastAPI**, **LangChain**, **ChromaDB** |
+| **Frontend** | **React**, **TailwindCSS** |
+| **LLM Strategy** | OpenAI GPT API + **RAG (Retrieval-Augmented Generation)** pipeline |
 
-Frontend: React, TailwindCSS
+---
 
-LLM: OpenAI GPT API + RAG pipeline
+## 📂 Project Structure
+
+The project is logically divided to separate the API, UI, and data sources.
+
+| Directory | Purpose | Key Files |
+| :--- | :--- | :--- |
+| `backend/` | The core API, LangChain logic, and database configuration. | `requirements.txt`, `.env.example` |
+| `frontend/` | The React-based chat user interface. | `package.json` |
+| `data/` | Stores the **personal data** (`personal.json`) used to train the bot. | `personal.json` |
+| `docs/` | For architecture diagrams, design notes, and documentation. | - |
+
+---
+
+## 🚀 Setup Guide
+
+Follow these steps to get the backend running locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/](https://github.com/)<your-username>/ask-bot.git
+cd ask-bot
+```
+
+### 2. Install backend deps:
+```bash
+   cd backend
+   pip install -r requirements.txt
+```
+
+### 3. Setup env:
+```bash
+   cp .env.example .env
+```
+
+### 4. (Frontend setup will be added later)
 
 ## 📜 License
-
 MIT
