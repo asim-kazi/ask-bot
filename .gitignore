@@ -220,6 +220,10 @@ dist/
 .env.production.local
 .env.test.local
 
+# Python virtual env
+.venv/
+.env
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
