@@ -1,19 +1,102 @@
 {
-  "name": "Asim Faruk Kazi",
-  "role": "CSE (AI-ML) Final Year Student",
-  "skills": ["Python", "Java", "SQL", "Machine Learning", "React", "FastAPI"],
+  "profile": {
+    "name": "Asim Kazi",
+    "title": "Final Year CSE (AI-ML) Student",
+    "bio": "Coding enthusiast with hands-on experience in Java, Python, C++, and Web Development. Looking for opportunities to build scalable software solutions and grow as a full-stack engineer.",
+    "email": "asimkazi8010@gmail.com",
+    "location": "Ichalkaranji, Maharashtra",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/asim-kazi-05079a292/",
+      "github": "https://github.com/asim-kazi/"
+    },
+    "membership": ["Member of CodeChef"]
+  },
   "education": [
     {
-      "degree": "B.Tech in CSE (AI-ML)",
-      "institute": "DKTE Society's Textile & Engineering Institute (An Empowered Autonomous Institute)",
-      "year": "2022-2026"
+      "degree": "B.Tech in Computer Science (AI-ML)",
+      "institute": "DKTE’s Textile and Engineering Institute, Ichalkaranji",
+      "year": 2025,
+      "cgpa": "7.89/10"
+    },
+    {
+      "degree": "Higher Secondary Certificate (HSC)",
+      "institute": "Sharad Science and Commerce College, Yadrav",
+      "year": 2022,
+      "percentage": "73.83%"
+    },
+    {
+      "degree": "Secondary School Certificate (SSC)",
+      "institute": "Anas English Medium School, Kabnoor",
+      "year": 2020,
+      "percentage": "78.20%"
     }
+  ],
+  "skills": [
+    "Python",
+    "Java",
+    "C++",
+    "SQL",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "PHP",
+    "Angular",
+    "MySQL",
+    "Oracle",
+    "Git",
+    "GitHub",
+    "Google Colab",
+    "Machine Learning",
+    "Data Structures & Algorithms",
+    "Operating Systems",
+    "Computer Networks"
   ],
   "projects": [
     {
-      "title": "AI Chatbot Project",
-      "description": "Personal assistant chatbot with RAG + GPT fallback",
-      "tech": ["Python", "LangChain", "React", "FastAPI"]
+      "id": "p1",
+      "title": "Neuropulse: AI-Based Screen Addiction & Dopamine Spike Detector",
+      "desc": "Developing an AI-powered system to monitor smartphone usage patterns, detect addictive behavior, and infer dopamine spikes in real time.",
+      "stack": [
+        "Python",
+        "Machine Learning",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy"
+      ],
+      "repo": null,
+      "notes": "Currently in dataset creation and model training stage."
+    },
+    {
+      "id": "p2",
+      "title": "Flash Card Generator",
+      "desc": "A responsive web app to create and manage digital flashcards for studying. Supports text and image cards, improving usability for learners.",
+      "stack": ["HTML", "CSS", "JavaScript", "PHP", "NLP"],
+      "repo": "https://github.com/asim-kazi/Flashcard_Generator",
+      "notes": "Version control with GitHub for collaboration."
+    },
+    {
+      "id": "p3",
+      "title": "Movie Recommendation System",
+      "desc": "A content-based movie recommendation engine using TF-IDF and cosine similarity to suggest top N similar movies based on user input.",
+      "stack": ["Python", "Pandas", "Scikit-learn"],
+      "repo": "https://github.com/asim-kazi/Python_Projects/tree/main/Movie_Recommendation_System",
+      "notes": "Good practice with ML pipelines."
+    },
+    {
+      "id": "p4",
+      "title": "Restaurant Management System",
+      "desc": "A web-based system to handle reservations, orders, and billing. Focused on user-friendly design and smooth navigation.",
+      "stack": ["HTML", "CSS", "JavaScript", "PHP"],
+      "repo": "https://github.com/asim-kazi/Web-Tech/tree/main/Web-Tech",
+      "notes": "Improved UI/UX skills."
+    },
+    {
+      "id": "p5",
+      "title": "Online Registration of Dairy Farmers",
+      "desc": "A digital platform for dairy farmers to register and maintain production data, reducing manual paperwork.",
+      "stack": ["HTML", "CSS", "JavaScript", "PHP"],
+      "repo": "https://github.com/asim-kazi/Mini-Project",
+      "notes": "Mobile-friendly forms for rural users."
     }
   ]
 }
