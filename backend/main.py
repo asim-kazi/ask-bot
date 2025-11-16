@@ -1,31 +1,41 @@
+# backend/main.py
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-import os
-from dotenv import load_dotenv
+from pydantic import BaseModel
+from typing import Optional
+import uvicorn
+from retrieval_qa import answer_query
 
-# Load .env file (for future API keys)
-load_dotenv()
+app = FastAPI(title="Ask-Bot Backend")
 
-app = FastAPI(title="AskMyName-Bot")
-
-# Enable CORS (so frontend can talk to backend)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # in prod, restrict to your domain
+    allow_origins=["*"],  # for dev only; in prod restrict to your domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+class ChatPayload(BaseModel):
+    message: str
+    session_id: Optional[str] = None
 
 @app.get("/ping")
 async def ping():
     return {"message": "pong"}
 
 @app.post("/chat")
-async def chat(payload: dict):
+async def chat(payload: ChatPayload):
     """
-    Temporary placeholder endpoint.
-    payload: {"message": "user input"}
+    Payload: {"message":"..."}
+    Returns: {"reply": "...", "sources": [...], "retrieved": bool}
     """
-    user_message = payload.get("message", "")
-    return {"reply": f"Placeholder reply for: {user_message}"}
+    q = payload.message.strip()
+    if not q:
+        return {"reply": "Please provide a message in the 'message' field.", "sources": [], "retrieved": False}
+    res = answer_query(q)
+    return {"reply": res["answer"], "sources": res["source_documents"], "retrieved": res["used_retrieval"], "top_score": res.get("top_score")}
+
+# For running with: uvicorn main:app --reload --port 8000
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
